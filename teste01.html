@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Convênio</th>
+        <th>Endereço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>João da Silva</td>
+        <td>ConvenioA</td>
+        <td>Rua A, 123</td>
+        <td>
+          <button onclick="editarDados(this)">Editar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Maria Oliveira</td>
+        <td>ConvenioB</td>
+        <td>Avenida B, 456</td>
+        <td>
+          <button onclick="editarDados(this)">Editar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Pedro Santos</td>
+        <td>ConvenioC</td>
+        <td>Travessa C, 789</td>
+        <td>
+          <button onclick="editarDados(this)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="cadastrarDados()">Cadastrar Cliente</button>
+
+  <script>
+    function cadastrarDados() {
+      // Lógica para cadastrar os dados
+      alert('Dados cadastrados com sucesso!');
+    }
+
+    function editarDados(button) {
+      var row = button.parentNode.parentNode;
+      var nome = row.cells[0].innerHTML;
+      var convenio = row.cells[1].innerHTML;
+      var endereco = row.cells[2].innerHTML;
+
+      // Lógica para editar os dados
+      alert('Editando dados:\nNome: ' + nome + '\nConvênio: ' + convenio + '\nEndereço: ' + endereco);
+    }
+  </script>
+</body>
+</html>
